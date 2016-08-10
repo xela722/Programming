@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kappa</title>
+	<style type="text/css">
+
+		body{
+			text-align: center;
+		}
+
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			var can = document.getElementById('can');
+			var ctx = can.getContext('2d');
+
+			document.addEventListener('keydown', function(event){
+				var baseKey = event.which;
+				if (baseKey>=78 && baseKey<91) {
+					var rotChar = String.fromCharCode((baseKey+13)-26);
+					update(rotChar);
+				} else if (baseKey >= 65 && baseKey<78) {
+					var rotChar = String.fromCharCode(baseKey+13);
+					update(rotChar);
+				} else if (baseKey>=48 && baseKey<=57 || baseKey>=96 && baseKey<=105){
+					if(baseKey>=48 && baseKey<=57){
+						var rotChar = String.fromCharCode(baseKey);
+						update(rotChar);
+					} else {
+						var rotChar = String.fromCharCode(baseKey-48);
+						update(rotChar);
+					}
+				} else {
+					var rotChar = String.fromCharCode(baseKey);
+				}
+			});
+
+
+
+			letter = function(x){
+				ctx.font = "30px arial";
+				ctx.fillText(x,10,50);
+			}
+
+			update = function(y){
+				ctx.clearRect(0, 0, can.width, can.height);
+				letter(y);
+			}
+			getRotChar = function(z){
+				var rotChar = String.fromCharCode(z);
+			}
+		});
+	</script>
+</head>
+<body>
+	<canvas id='can' width="600" height="300"></canvas>
+</body>
+</html>
