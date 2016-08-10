@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Baseball Game Tracker</title>
+        <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+        <script type="text/javascript" src='script.js'>
+
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <table id='Tbl'>
+            <tr >
+                <td class='top'>
+                    #
+                </td>
+                <td class='top'>
+                    Player
+                </td>
+                <td class='top'>
+                    AB
+                </td>
+                <td class='top' >
+                    H
+                </td>
+                <td class='top'>
+                    AVG
+                </td>
+            </tr>
+
+        </table>
+        <br>
+        <form class="form" action="index.html" method="post">
+            Number: <input type="text" name="num" value="" id='num'>
+            <br>
+            Name: <input type="text" name="name" value="" id='name'>
+            <br>
+            At Bats: <input type="text" name="ab" value="" id='ab'>
+            <br>
+            Hits: <input type="text" name="h" value="" id='hits'>
+            <br>
+            <input type="button" name="sub" value="New Player" onclick="newPlayer()">
+        </form>
+    </body>
+</html>
