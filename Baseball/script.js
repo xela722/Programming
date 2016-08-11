@@ -5,8 +5,6 @@ var x = 0;
 var row = [];
 var cell = [];
 var y = 0;
-var z = 0;
-var w = 0;
 function newPlayer() {
 
     var tempNum = document.getElementById('num').value;
@@ -34,13 +32,12 @@ function player(num, name, ab, h){
     this.name = name;
     this.ab = ab;
     this.h = h;
-    this.avg = this.h/this.ab;
+    this.avg = Math.round((this.h/this.ab)*1000)/1000;
 };
 function addData(){
     var tab = document.getElementById('Tbl');
     row[y] = tab.insertRow(y+1);
     for (var i = 0; i <5 ; i++) {
-
         cell[i] = row[y].insertCell(i);
         if (i === 0) {
             cell[i].innerHTML = players[x].num;
