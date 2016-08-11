@@ -6,12 +6,15 @@ var row = [];
 var cell = [];
 var y = 0;
 function newPlayer() {
-
+    var drop = document.getElementById('Players');
     var tempNum = document.getElementById('num').value;
     var tempName = document.getElementById('name').value;
     var tempAb = document.getElementById('ab').value;
     var tempH = document.getElementById('hits').value;
+    var opt = document.createElement('option');
     if (x<12) {
+        opt.text = tempName;
+        drop.add(opt);
         players[x] = new player(tempNum, tempName, tempAb, tempH);
         tempNum = null;
         tempName = null;
@@ -20,6 +23,7 @@ function newPlayer() {
         console.log(players[x]);
         addData();
         x++;
+
     }else {
         window.alert("Too many players!");
     }
@@ -53,4 +57,10 @@ function addData(){
         }
     }
 
+};
+
+function remPlayer() {
+    var dropdown = document.getElementById('Players');
+    var play = dropdown.value;
+    console.log(play);
 }
