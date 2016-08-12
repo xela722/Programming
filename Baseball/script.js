@@ -1,5 +1,3 @@
-
-
 var players = [];
 var x = 0;
 var row = [];
@@ -58,9 +56,22 @@ function addData(){
     }
 
 };
-
 function remPlayer() {
+    var tab = document.getElementById('Tbl');
     var dropdown = document.getElementById('Players');
-    var play = dropdown.value;
-    console.log(play);
+    var play = dropdown.options[dropdown.selectedIndex].text;
+    for (var i = 0; i < players.length; i++) {
+        if (players[i].name === play) {
+            players.splice(i,1,"empty");
+            for (var j = 0; j <= row.length; j++) {
+                for (var k = 0; k < cell.length; k++) {
+                    if (tab.rows[j].cells[k].innerHTML === play) {
+                        tab.deleteRow(j);
+                        y--
+                    }
+                }
+            }
+        }
+
+    }
 }
