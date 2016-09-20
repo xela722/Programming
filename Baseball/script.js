@@ -60,6 +60,7 @@ function remPlayer() {
     var tab = document.getElementById('Tbl');
     var dropdown = document.getElementById('Players');
     var play = dropdown.options[dropdown.selectedIndex].text;
+    dropdown.remove(dropdown.selectedIndex);
     for (var i = 0; i < players.length; i++) {
         if (players[i].name === play) {
             players.splice(i,1,"empty");
