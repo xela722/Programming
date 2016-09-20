@@ -56,7 +56,7 @@ function addData(){
     }
 
 };
-//comment
+//commen
 function remPlayer() {
     var tab = document.getElementById('Tbl');
     var dropdown = document.getElementById('Players');
