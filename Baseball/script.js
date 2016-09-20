@@ -56,7 +56,6 @@ function addData(){
     }
 
 };
-//Did it work
 function remPlayer() {
     var tab = document.getElementById('Tbl');
     var dropdown = document.getElementById('Players');
