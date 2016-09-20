@@ -56,7 +56,7 @@ function addData(){
     }
 
 };
-//I Honestly hate git
+//Did it work
 function remPlayer() {
     var tab = document.getElementById('Tbl');
     var dropdown = document.getElementById('Players');
