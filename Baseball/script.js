@@ -76,3 +76,5 @@ function remPlayer() {
 
     }
 }
+//kappa
+//lol
